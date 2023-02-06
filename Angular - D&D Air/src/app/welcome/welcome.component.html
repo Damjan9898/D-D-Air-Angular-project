@@ -1,0 +1,152 @@
+<div class="main_image">
+  <h1 class="main_title">Find your flight<br>With D&D Air</h1>
+  <div class="filter_wrapper">
+    <div class="filter_move">
+      <p class="book_title">Book a flight</p>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form_flex">
+
+      <div class="form_row">
+
+
+        <div class="from_to">
+          <div class="matFormElement">
+            <mat-form-field class="matFormField" appearance="fill">
+              <mat-label>From</mat-label>
+              <input type="text" matInput ngModel aria-label="From" name="locationstart" required id="from" [formControl]="myControl" [matAutocomplete]="auto" #from>
+              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+          <div>
+            <span class="material-symbols-outlined">
+              <button type="button" mat-icon-button class="example-icon button_reverse" aria-label="Example icon-button with menu icon" (click)="reverceDestination()">
+                <mat-icon>sync_alt</mat-icon>
+              </button>
+
+              </span>
+          </div>
+          <div class="matFormElement">
+            <mat-form-field class="matFormField" appearance="fill">
+              <mat-label>To</mat-label>
+              <input type="text" matInput ngModel name="locationend" aria-label="To" required id="to" [formControl]="myControl1" [matAutocomplete]="auto1">
+              <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions1 | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+        </div>
+
+
+
+        <div class="matFormElement">
+          <mat-form-field class="matFormField" appearance="fill">
+            <mat-label>Departure</mat-label>
+            <input matInput [matDatepicker]="picker" matInput required ngModel name="flightstart">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <div class="form_row sec_form_row" >
+        <div class="secrowsec">
+          <div class="matFormElement">
+            <mat-form-field appearance="fill">
+              <mat-label>Airline</mat-label>
+              <mat-select ngModel name="airline" required>
+                <mat-option value="Air Serbia">
+                  Air Serbia
+                </mat-option>
+                <mat-option value="Lufthansa">
+                  Lufthansa
+                </mat-option>
+                <mat-option value="Turkish Airlines">
+                  Turkish Airlines
+                </mat-option>
+                <mat-option value="Wizz Air">
+                  Wizz Air
+                </mat-option>
+                <mat-option value="Fly Emirates">
+                  Fly Emirates
+                </mat-option>
+                <mat-option value="Qatar Airways">
+                  Qatar Airways
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+          <div class="matFormElement">
+            <mat-form-field appearance="fill">
+              <mat-label>Class</mat-label>
+              <mat-select ngModel name="classflight" required>
+                <mat-option value="Economy">
+                  Economy
+                </mat-option>
+                <mat-option value="Business">
+                  Business
+                </mat-option>
+                <mat-option value="First Class">
+                  First Class
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          </div>
+
+
+
+
+
+      <div class="matFormElement">
+        <div>
+          <button class="matButton subbut button_txt filtr_but" type="submit" mat-raised-button color="primary" [disabled]="f.invalid" >Search</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="main_wrapper">
+  <h2 *ngIf="this.isLoggedIn">Recommended For You</h2>
+  <div class="all_flights_wrapper scroll_block" *ngIf="this.isLoggedIn">
+    <app-recommended-flights class="all_flights_section"></app-recommended-flights>
+  </div>
+  <div class="popular_wrapper">
+    <h2>Popular destinations</h2>
+    <app-popular class="popular_section"></app-popular>
+  </div>
+  <h2>Best Offer Flights</h2>
+  <div class="all_flights_wrapper scroll_block bestoof">
+    <app-best-offer-flights class="all_flights_section"></app-best-offer-flights>
+  </div>
+
+</div>
+
+
+<footer>
+  <p class="footer_content">
+    Copyright &#169; D&D Air
+  </p>
+</footer>

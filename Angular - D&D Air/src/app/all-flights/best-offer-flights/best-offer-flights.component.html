@@ -1,0 +1,52 @@
+<div class="good_flights_wrapper">
+  <div *ngFor="let flight of flights | async;let i = index" [attr.data-index]="i" class="good_flight">
+    <div class="good_flight_img_wrapper">
+      <img src="{{flight.image}}">
+      <div class="city_block">{{ flight.locationend }}</div>
+    </div>
+    <div class="good_flight_content">
+      <span class="flight_date_start">{{this.flightDate[i]}}</span>
+      <div class="first_cont">
+        <div class="good_flight_time">
+          <div class="gf_time">
+            <div>{{flight.timestart}}</div>
+            <div class="gf_time_location">{{flight.locationstart}}</div>
+          </div>
+          <div class="flight_lines">
+            <div class="flight_line">
+
+            </div>
+            <mat-icon class="flight_takeoff">flight_takeoff</mat-icon>
+            <div class="flight_line">
+
+            </div>
+            <div class="gf_clock">
+              {{flight.time}}
+            </div>
+          </div>
+          <div class="gf_time">
+            <div>{{flight.timeend}}</div>
+            <div class="gf_time_location">{{flight.locationend}}</div>
+          </div>
+        </div>
+        <div class="gf_airline_wrapper">
+          <img class="airline_logo" src="{{flight.airlinelogo}}"><p class="gf_airline">{{flight.airline}}</p>
+        </div>
+      </div>
+
+      <div class="gf_price_button">
+        <div class="good_flight_price_wrapper">
+          <p class="gf_classflight">{{flight.classflight}}</p>
+
+          <p class="good_flight_price"><span class="old_price">{{flight.oldprice}}.00 &euro;</span>&nbsp;&nbsp; {{flight.price}}.00 &euro;</p>
+        </div>
+        <div class="gf_button">
+          <button mat-raised-button color="primary" class="button_txt" (click)="flightDetails(flight.id)">Flight Details</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

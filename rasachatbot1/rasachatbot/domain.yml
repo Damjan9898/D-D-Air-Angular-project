@@ -1,0 +1,77 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - cities
+  - departure
+  - airlines
+  - seats
+  - classflights
+
+entities:
+  - city:
+      roles:
+        - from
+        - to
+  - date
+  - airline
+  - seat
+  - classflight
+
+slots:
+  from:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city
+      role: from
+  to:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city
+      role: to
+  date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date
+  airline:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: airline
+  seat:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: seat
+  classflight:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: classflight
+
+responses:
+  utter_greet:
+  - text: "Hey! Do you need some help with flight booking?"
+
+  utter_goodbye:
+  - text: "Goodbye"
+
+  utter_cities_question:
+  - text: "From which to which city would you like to book a flight?"
+
+actions:
+- action_cities
+- action_date
+- action_airlines
+- action_seats
+- action_classflights
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

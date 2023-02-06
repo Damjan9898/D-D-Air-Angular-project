@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Flight booking</h1>
+<div mat-dialog-content>
+  Are you sure you want to book this flight?
+</div>
+<div *ngFor="let flight of flightDetails | async;let i = index" [attr.data-index]="i" class="flightInfo">
+    <span> <b>From:</b> {{ flight.locationstart }} &nbsp;&nbsp;</span>
+    <span> <b>To:</b> {{ flight.locationend }}</span>
+    <br><br>
+    <span> <b>Departure:</b> {{this.flightDate[i]}}</span>
+    <br><br>
+    <p class="air_span"> <b>Airline:</b> {{ flight.airline }}</p>
+    <span> <mat-icon class="pop_person">person</mat-icon> x {{ this.popupData.seats }} &nbsp;&nbsp;</span><br><br>
+    <span> <b>Total:</b>&nbsp; <b class="price_pop">{{ flight.price * this.popupData.seats }}.00 &euro;</b></span>
+</div>
+<div mat-dialog-actions class="button_center">
+    <button mat-button mat-dialog-close>No</button>&nbsp;&nbsp;&nbsp;
+    <button mat-button mat-dialog-close cdkFocusInitial (click)="book(this.popupData.flight_id, this.popupData.seats)">Yes</button>
+
+</div>

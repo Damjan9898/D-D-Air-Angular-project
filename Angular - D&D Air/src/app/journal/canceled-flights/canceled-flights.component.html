@@ -1,0 +1,48 @@
+<div class="small_wrap">
+  <div class="flight s_flight csmall" *ngFor="let flight of flights | async;let i = index" [attr.data-index]="i">
+
+
+    <div class="small_flight">
+      <div class="good_flight_img_wrapper sw">
+        <img src="{{flight.image}}">
+        <div class="city_block">{{ flight.locationend }}</div>
+      </div>
+
+
+      <div class="gf_airline_wrapper s_gf_airline_wrapper">
+        <img class="airline_logo" src="{{flight.airlinelogo}}"><p class="gf_airline">{{flight.airline}}</p>
+      </div>
+
+      <div class="good_flight_time s_good_flight_time">
+        <div class="gf_time">
+          <div>{{flight.locationstart}}</div>
+        </div>
+        <div class="flight_lines">
+          <div class="flight_line">
+
+          </div>
+          <mat-icon class="flight_takeoff">flight_takeoff</mat-icon>
+          <div class="flight_line">
+
+          </div>
+        </div>
+        <div class="gf_time">
+          <div>{{flight.locationend}}</div>
+        </div>
+      </div>
+
+
+      <p class="s_date">
+        {{this.flightDate[i]}}
+      </p>
+    </div>
+
+    <hr class="review_hr">
+
+    <p class="canceled_text">Canceled</p>
+
+</div>
+<div class="small_flight no_height"></div>
+<div class="small_flight no_height"></div>
+
+</div>

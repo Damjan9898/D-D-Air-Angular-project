@@ -1,0 +1,58 @@
+<div class="good_flights_wrapper uf_wrapper">
+
+<div *ngFor="let uf of upcomingFlights | async;let i = index" [attr.data-index]="i" class="good_flight upcoming_flight">
+
+      <div class="good_flight_img_wrapper">
+        <img src="{{uf.image}}">
+        <div class="city_block">{{ uf.locationend }}</div>
+      </div>
+      <div class="good_flight_content">
+        <span class="flight_date_start">{{this.flightDate[i]}}</span>
+        <div class="first_cont">
+          <div class="good_flight_time">
+            <div class="gf_time">
+              <div>{{uf.timestart}}</div>
+              <div class="gf_time_location">{{uf.locationstart}}</div>
+            </div>
+            <div class="flight_lines">
+              <div class="flight_line">
+
+              </div>
+              <mat-icon class="flight_takeoff">flight_takeoff</mat-icon>
+              <div class="flight_line">
+
+              </div>
+              <div class="gf_clock">
+                {{uf.time}}
+              </div>
+            </div>
+            <div class="gf_time">
+              <div>{{uf.timeend}}</div>
+              <div class="gf_time_location">{{uf.locationend}}</div>
+            </div>
+          </div>
+          <div class="gf_airline_wrapper">
+            <img class="airline_logo" src="{{uf.airlinelogo}}"><p class="gf_airline">{{uf.airline}}</p>
+          </div>
+        </div>
+
+        <div class="gf_price_button">
+          <div class="good_flight_price_wrapper">
+            <p class="gf_classflight">{{uf.classflight}}</p>
+
+            <p class="gf_classflight"><mat-icon class="uf_person">person</mat-icon> x {{ uf.seats_booked }}</p>
+
+            <p class="good_flight_price">Total price:  &euro;{{ uf.seats_booked * uf.price }}.00</p>
+          </div>
+          <div class="gf_button">
+            <button mat-raised-button color="primary" class="button_txt" (click)="flightDetails(uf.flight_id)">Flight Details</button>&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="warn" type="button" (click)="openDialog(uf.id)"> Cancel Flight </button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+</div>
+</div>

@@ -1,0 +1,22 @@
+.flightInfo{
+    padding:10px;
+}
+.pop_person{
+  position:relative;
+  top:6px;
+}
+.price_pop{
+  color:#3F51B5;
+
+}
+
+.button_center{
+  margin:15px auto;
+  width:fit-content;
+}
+.flightInfo{
+  padding:0px 20px;
+}
+.air_span{
+  padding-bottom: 5px;
+}

@@ -1,0 +1,122 @@
+<div class="wrapp_main" *ngFor="let flight of flightDetail | async;let i = index" [attr.data-index]="i">
+  <div class="detail_padding">
+
+
+
+<div class="detail_main">
+  <div class="detail_img">
+    <img src="{{flight.image}}" alt="flight_image">
+  </div>
+  <div class="detail_main_content detail_relative">
+    <span class="flight_date_start">{{this.flightDate[i]}}</span>
+    <div class="good_flight_time">
+      <div class="gf_time">
+        <div>{{flight.timestart}}</div>
+        <div class="gf_time_location">{{flight.locationstart}}</div>
+      </div>
+      <div class="flight_lines">
+        <div class="flight_line">
+
+        </div>
+        <mat-icon class="flight_takeoff">flight_takeoff</mat-icon>
+        <div class="flight_line">
+
+        </div>
+        <div class="gf_clock">
+          {{flight.time}}
+        </div>
+      </div>
+      <div class="gf_time">
+        <div>{{flight.timeend}}</div>
+        <div class="gf_time_location">{{flight.locationend}}</div>
+      </div>
+    </div>
+
+    <div class="details_text_flight">
+      <p class="detail_departure">Departure:</p>
+      <p class="mrg_dt"><mat-icon>schedule</mat-icon><span class="time_d">{{flight.timestart}}, {{this.flightDate[i]}}</span></p>
+      <p><mat-icon>location_on</mat-icon><span class="location_d">{{flight.locationstart}}, {{flight.airportstart}}</span></p>
+
+      <hr class="hr_detail">
+
+      <p class="detail_return">Return:</p>
+      <p class="mrg_dt"><mat-icon>schedule</mat-icon><span class="time_d">{{flight.timeend}}, {{this.flightReturn[i]}}</span></p>
+      <p><mat-icon>location_on</mat-icon><span class="location_d">{{flight.locationend}}, {{flight.airportend}}</span></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="book_details">
+  <div class="airline_dit">
+      <p class="info_title">Flight Info</p>
+
+      <div class="flex_info">
+        <div class="det">
+          <p class="info_content">
+            {{flight.description}}
+          </p>
+        </div>
+        <div class="bk_info">
+
+
+        <div class="gf_airline_wrapper airline_info">
+          <img class="airline_logo" src="{{flight.airlinelogo}}"><p class="gf_airline">{{flight.airline}}</p>
+        </div>
+        <div class="inf">
+          <p>Distrance : {{flight.distance}}km</p>
+          <p>Class : {{flight.classflight}}</p>
+          <p>Remaining seats: {{flight.seats}}</p>
+          <p>Price : <b class="purple">{{flight.price}}.00 &euro;</b></p>
+        </div>
+
+        <hr class="hr_detail">
+
+        <p class="fl_book">Flight booking</p>
+
+
+
+        <form>
+          Passengers: &nbsp;&nbsp;
+          <button class="seat_but minus" (click)="passengers(-1)">-</button><input type="text" value="1" class="number_seats" id="passengers" name="passengers"><button  class="seat_but plus" (click)="passengers(1)">+</button><br>
+          <button mat-raised-button type="submit" color="primary" class="button_txt book_b"  (click)="openDialog(flight.id)" >Book now</button>
+
+        </form>
+
+
+      </div>
+
+      </div>
+  </div>
+  <div class="book_dit">
+
+  </div>
+</div>
+
+
+<div class="reviews_detail">
+  <p class="info_title">Flight reviews</p>
+
+  <p class="fr">Overall rating <mat-icon class="rat_star">star</mat-icon>{{this.averageRating}}</p>
+
+  <hr class="hr_detail">
+
+  <div *ngFor="let review of reviews | async">
+    <p>{{review.name}} <mat-icon class="rat_star">star</mat-icon>{{review.rating}}</p><br>
+    {{review.comment}}<br><br><br>
+  </div>
+
+</div>
+
+
+
+  </div>
+</div>
+<footer>
+  <p class="footer_content">
+    Copyright &#169; D&D Air
+  </p>
+</footer>
+
+
+

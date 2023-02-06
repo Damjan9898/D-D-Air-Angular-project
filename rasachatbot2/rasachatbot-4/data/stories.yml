@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: play rock paper scissors
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  

@@ -1,0 +1,20 @@
+<div class="cards_wrapper" >
+
+  <div class="card" *ngFor="let city of cities | async">
+    <div class="card_image">
+      <img src="{{ city.mainimage }}">
+      <div class="city_block">{{ city.city }}</div>
+    </div>
+    <div class="card_text">
+      <p class="city_title">{{ city.cardtitle }}</p>
+
+      <p class="city_subtitle">{{ city.cardtext }}</p>
+
+      <a class="learn_more" (click)="popularCity(city.id)">Learn More <mat-icon class="arr_link">navigate_next</mat-icon></a>
+    </div>
+
+  </div>
+
+</div>
+
+

@@ -1,0 +1,52 @@
+<div class="wrapp_main"  style="padding-bottom:200px;">
+  <div class="logIn">
+    <section class="form">
+        <h1>Log in</h1>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <!-- Email -->
+            <div class="matFormElement">
+            <mat-form-field class="matFormField" appearance="fill" class="log_matt">
+                <mat-label>Email address</mat-label>
+                <input type="email" matInput ngModel name="email" required #emailInput="ngModel" email class="log_matt">
+
+                <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+                <mat-error *ngIf="!emailInput.hasError('required')">Please use the correct email format</mat-error>
+            </mat-form-field>
+            <div class="error_message" *ngIf="errorExistsEmail">No account associated with this email address</div>
+            </div>
+
+            <!-- Password -->
+            <div class="matFormElement">
+            <mat-form-field class="matFormField" hintLabel="Please enter minimum 8 characters" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput ngModel name="password" #passInput="ngModel" required>
+
+                <mat-hint align="end"> {{ passInput.value?.length }} / 8</mat-hint>
+
+            </mat-form-field>
+            <div class="error_message" *ngIf="errorExistsPassword">Your password is incorrect</div>
+            </div>
+
+            <!--Button Submit-->
+            <div class="matFormElement">
+              <div class="lg_but_wrapper">
+                <button class="matButton lg_but button_txt" type="submit" mat-raised-button color="primary" [disabled]="f.invalid" >Submit</button>
+              </div>
+
+            </div>
+
+            <div class="haveAnAcc"><p>Don't have an account?<br> <a routerLink="/signup" class="sign_link">Sign up</a></p></div>
+        </form>
+
+
+    </section>
+</div>
+</div>
+
+<footer>
+  <p class="footer_content">
+    Copyright &#169; D&D Air
+  </p>
+</footer>
+
+

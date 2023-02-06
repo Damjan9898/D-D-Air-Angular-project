@@ -1,0 +1,78 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-airline",
+      "2": "I-airline",
+      "3": "L-airline",
+      "4": "U-airline",
+      "5": "B-city",
+      "6": "I-city",
+      "7": "L-city",
+      "8": "U-city",
+      "9": "B-classflight",
+      "10": "I-classflight",
+      "11": "L-classflight",
+      "12": "U-classflight",
+      "13": "B-date",
+      "14": "I-date",
+      "15": "L-date",
+      "16": "U-date",
+      "17": "B-seat",
+      "18": "I-seat",
+      "19": "L-seat",
+      "20": "U-seat",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-airline": 1,
+      "I-airline": 2,
+      "L-airline": 3,
+      "U-airline": 4,
+      "B-city": 5,
+      "I-city": 6,
+      "L-city": 7,
+      "U-city": 8,
+      "B-classflight": 9,
+      "I-classflight": 10,
+      "L-classflight": 11,
+      "U-classflight": 12,
+      "B-date": 13,
+      "I-date": 14,
+      "L-date": 15,
+      "U-date": 16,
+      "B-seat": 17,
+      "I-seat": 18,
+      "L-seat": 19,
+      "U-seat": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  },
+  {
+    "tag_name": "role",
+    "ids_to_tags": {
+      "1": "B-from",
+      "2": "I-from",
+      "3": "L-from",
+      "4": "U-from",
+      "5": "B-to",
+      "6": "I-to",
+      "7": "L-to",
+      "8": "U-to",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-from": 1,
+      "I-from": 2,
+      "L-from": 3,
+      "U-from": 4,
+      "B-to": 5,
+      "I-to": 6,
+      "L-to": 7,
+      "U-to": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

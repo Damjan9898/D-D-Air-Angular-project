@@ -1,0 +1,46 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  },
+  {
+    "tag_name": "role",
+    "ids_to_tags": {
+      "1": "B-from",
+      "2": "I-from",
+      "3": "L-from",
+      "4": "U-from",
+      "5": "B-to",
+      "6": "I-to",
+      "7": "L-to",
+      "8": "U-to",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-from": 1,
+      "I-from": 2,
+      "L-from": 3,
+      "U-from": 4,
+      "B-to": 5,
+      "I-to": 6,
+      "L-to": 7,
+      "U-to": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

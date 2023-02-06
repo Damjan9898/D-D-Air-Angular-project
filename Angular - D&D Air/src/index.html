@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <style>
+    .rw-conversation-container .rw-header{
+      background-color:#3F51B5;
+    }
+
+    .rw-conversation-container .rw-messages-container .rw-message .rw-client{
+      background-color: #3F51B5;
+    }
+
+    .rw-conversation-container .rw-messages-container .rw-message .rw-client .rw-message-text{
+      color:white;
+    }
+
+    .rw-launcher{
+      background-color: #3F51B5;
+      cursor:pointer;
+    }
+    .rw-conversation-container .rw-reply{
+      background-color: #3F51B5;
+    }
+
+  </style>
+
+
+
+
+  <app-root></app-root>
+
+
+
+<script>
+
+// localStorage.removeItem("chat_session");
+
+  if(localStorage.getItem("id")){
+    !(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                title: 'D&D Flightbot',
+                initPayload: '/greet',
+                customData: { language: "en" },
+                socketUrl: "http://localhost:5005",
+                // add other props here
+                profileAvatar: "/assets/img/bot.png",
+                openLauncherImage: "/assets/img/chat1.png",
+                showFullScreenButton:true,
+                showMessageDate: true,
+                inputTextFieldHint:"What's on your mind"
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+  } else {
+
+    !(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                title: 'D&D Flightbot',
+                initPayload: '/greet',
+                customData: { language: "en" },
+                socketUrl: "http://localhost:5004",
+                // add other props here
+                profileAvatar: "/assets/img/bot.png",
+                openLauncherImage: "/assets/img/chat1.png",
+                showFullScreenButton:true,
+                showMessageDate: true,
+                inputTextFieldHint:"What's on your mind"
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+  }
+
+</script>
+</body>
+</html>

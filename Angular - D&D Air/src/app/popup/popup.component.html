@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Flight cancellation</h1>
+<div mat-dialog-content>
+  Are you sure you want to cancel the flight?
+</div>
+<div mat-dialog-actions class="button_center">
+  <button mat-button mat-dialog-close>No</button>&nbsp;&nbsp;&nbsp;
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="cancelFlight(this.popupData)">Yes</button>
+</div>

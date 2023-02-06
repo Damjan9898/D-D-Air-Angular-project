@@ -1,0 +1,71 @@
+.profile{
+    width:600px;
+    height:auto;
+    padding:1px;
+    background-color: rgb(244, 245, 248);
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius: 30px;
+  }
+
+  .headerSection{
+    display:flex;
+    
+  }
+  
+  .form{
+    width:400px;
+    height:auto;
+    margin:50px auto;
+  }
+  
+  /*.form form{*/
+    /* flex-direction: column-reverse;*/
+    /* flex-direction: column;*/
+    /* display:flex;*/
+    /* flex-direction: row;*/
+    /* justify-content: space-between; */
+  /*}*/
+  
+  .profileCard{
+    margin:20px auto;
+    /*  */
+  }
+  .matCard{
+    background-color: rgb(247, 248, 251);
+    color:primary;
+    padding:10px;
+
+  }
+
+  .matFormElement{
+    margin:20px auto;
+  }
+  
+  .matFormField{
+    width:100%;
+  }
+  
+  .matFormElement .matButton{
+    margin: auto;
+  }
+  
+  .privacyPolicy{
+    margin-top: 20px;
+  }
+  
+  a{
+    color:blue;
+    font-weight: 400;
+  }
+  a:hover{
+    color:rgb(0, 0, 149);
+  }
+  a:visited{
+    color: rgb(66, 1, 113);
+  }
+  .error_message{
+    color:red;
+  }
+  

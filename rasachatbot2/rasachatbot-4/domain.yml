@@ -1,0 +1,27 @@
+version: "3.1"
+
+intents:
+  - greet
+  - inform
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+
+responses:
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_greet:
+  - text: "Hello, welcome aboard to D&D Air. My name is Claire, and I will be your flight attendant."
+
+  utter_help:
+  - text: "If you need any help with flight booking, please be sure to [create an account](http://localhost:4200/signup), or [log in](http://localhost:4200/login) if you already have one."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,9 @@
+.csmall{
+  min-height:340px;
+}
+.canceled_text{
+  color:red;
+  font-weight: bold;
+  margin-left:10px;
+  font-size: 18px;
+}

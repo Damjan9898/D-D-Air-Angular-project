@@ -1,0 +1,150 @@
+<div class="wrapp_main">
+  <div class="logIn">
+
+<div class="profile">
+
+    <section class="form">
+
+        <div class="headerSection">
+            <div class="header">
+                <h1>Profile</h1>
+            </div>
+
+            <div class="editButton">
+                <button (click)="this.isEditing=!this.isEditing" mat-icon-button>
+                    <mat-icon matListIcon>
+                        edit
+                    </mat-icon>
+                </button>
+            </div>
+        </div>
+
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" *ngFor="let user of users | async">
+
+        <!-- First Name -->
+        <div class="profileCard">
+            <mat-card class="matCard" *ngIf="!this.isEditing">
+                <mat-card-subtitle>First name</mat-card-subtitle>
+                <span>{{ user.name }}</span>
+            </mat-card>
+        </div>
+        <div  class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field class="matFormField" appearance="fill">
+            <mat-label>First name</mat-label>
+            <input type="text" matInput ngModel name="name" required [(ngModel)]="user.name" #nameInput="ngModel">
+          </mat-form-field>
+        </div>
+
+        <!-- Last Name -->
+        <div class="profileCard">
+            <mat-card class="matCard" *ngIf="!this.isEditing">
+                <mat-card-subtitle>Last name</mat-card-subtitle>
+                <span>{{ user.surname }}</span>
+            </mat-card>
+        </div>
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field class="matFormField" appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input type="text" matInput ngModel name="surname" required [(ngModel)]="user.surname" #surnameInput="ngModel">
+          </mat-form-field>
+        </div>
+
+        <!-- Address -->
+        <div class="profileCard">
+            <mat-card class="matCard" *ngIf="!this.isEditing">
+                <mat-card-subtitle>Address</mat-card-subtitle>
+                <span>{{ user.address }}</span>
+            </mat-card>
+        </div>
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field class="matFormField" appearance="fill">
+            <mat-label>Address</mat-label>
+            <mat-icon matSuffix>room</mat-icon>
+            <input type="text" matInput ngModel name="address" required [(ngModel)]="user.address" #addressInput="ngModel">
+          </mat-form-field>
+        </div>
+
+        <!-- Telephone -->
+        <div class="profileCard">
+            <mat-card class="matCard" *ngIf="!this.isEditing">
+                <mat-card-subtitle>Telephone Number</mat-card-subtitle>
+                <span>{{ user.telephone }}</span>
+            </mat-card>
+        </div>
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field class="matFormField" appearance="fill">
+            <mat-label>Telephone Number</mat-label>
+            <mat-icon matSuffix>phone</mat-icon>
+            <input type="text" matInput ngModel name="telephone" required [(ngModel)]="user.telephone" #telephoneInput="ngModel">
+          </mat-form-field>
+        </div>
+
+        <!-- Email -->
+        <div class="profileCard">
+            <mat-card class="matCard" *ngIf="!this.isEditing">
+                <mat-card-subtitle>Email address</mat-card-subtitle>
+                <span>{{ user.email }}</span>
+            </mat-card>
+        </div>
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field class="matFormField" appearance="fill">
+            <mat-label>Email address</mat-label>
+            <input type="email" matInput ngModel name="email" required email [(ngModel)]="user.email" #emailInput="ngModel">
+
+            <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">Please use the correct email format</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Password -->
+        <div class="profileCard">
+
+        </div>
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field class="matFormField" hintLabel="Please enter minimum 8 characters" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput ngModel name="password" required [(ngModel)]="user.password" #passwordInput="ngModel">
+            <mat-hint align="end"> {{ passwordInput.value?.length }} / 8</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <!-- Selector -->
+        <div class="profileCard">
+            <mat-card class="matCard" *ngIf="!this.isEditing">
+                <mat-card-subtitle>Favorite destination</mat-card-subtitle>
+                <span>{{ user.destination }}</span>
+            </mat-card>
+        </div>
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <mat-form-field appearance="fill">
+            <mat-label>Favorite destination</mat-label>
+            <mat-select ngModel name="destination" required [(ngModel)]="user.destination" #destinationInput="ngModel">
+              <mat-option value="Belgrade">
+                Belgrade
+              </mat-option>
+              <mat-option value="Rome">
+                Rome
+              </mat-option>
+              <mat-option value="New York">
+                New York
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- Button Submit -->
+        <div class="matFormElement" *ngIf="this.isEditing">
+          <button class="matButton" type="submit" mat-raised-button color="primary" [disabled]="f.invalid" >Submit</button>
+        </div>
+
+      </form>
+    </section>
+
+  </div>
+</div>
+</div>
+<footer>
+  <p class="footer_content">
+    Copyright &#169; D&D Air
+  </p>
+</footer>

@@ -1,0 +1,73 @@
+
+.matFormField{
+    width:300px;
+}
+.haveYouEnjoyed{
+    font-size: 16px;
+}
+.form{
+    display:flex;
+}
+.commentButton{
+    margin: 10px;
+}
+.rating{
+    width:70px;
+}
+.hidden{
+    display:none;
+}
+.review{
+  padding:0px 10px;
+}
+.drop_tit{
+  display: flex;
+  justify-content: space-between;
+}
+.expand{
+  position:relative;
+  left:20px;
+}
+.r_title{
+  margin-bottom:20px;
+}
+.textarea{
+  min-height:200px;
+}
+
+
+/*brisi*/
+#rating_bar {
+  width:100%;
+  height:auto;
+  display:flex;
+  margin:10px auto 10px 10px;
+}
+#rating_bar > div:before {
+  content:"\2605";
+  cursor:pointer;
+  font-size:3em;
+}
+.star{
+  color: #c7c5c5;
+}
+#rating_bar:hover > div:before {
+  color: orange;
+}
+
+#rating_bar > div:hover ~ div:before {
+  color: #c7c5c5;
+}
+.checked {
+  color: orange!important;
+}
+.checked:hover {
+  color: orange!important;
+}
+.green_thanks{
+  color:green;
+  font-size:18px;
+  font-weight: bold;
+  margin:55px 10px 10px 10px;
+  text-align: center;
+}

@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+*{
+  margin:0px;
+  padding:0px;
+  border:none;
+  outline: 0;
+}
+
+body{
+  font-family: 'Tenor Sans', sans-serif;
+
+}
+h1 {
+    font-weight: 500;
+    font-family: 'Roboto';
+    font-size: 38px;
+    color:rgb(51, 60, 181);
+    text-align: center;
+}
+
+.good_flights_wrapper{
+  display: flex;
+  flex-direction: column;
+
+}
+.good_flight{
+  background-color: white;
+  height:210px;
+  width:100%;
+  border-radius: 8px;
+  margin-bottom:40px;
+  box-shadow: 5px 0px 15px #c2c2c2;
+  display:flex;
+}
+.good_flight_img_wrapper{
+  width:400px;
+  overflow: hidden;
+  height:210px;
+  border-radius: 8px;
+  position: relative;
+}
+.good_flight_img_wrapper img{
+  width:100%;
+}
+.city_block{
+  position: absolute;
+  top:10px;
+  left:10px;
+  background-color: black;
+  padding:5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  color:white;
+}
+.good_flight_time{
+  display:flex;
+  align-items: center;
+  width:auto;
+  height:50px;
+}
+.flight_lines{
+  display:flex;
+  align-items: center;
+  position: relative;
+}
+.flight_line{
+  width:100px;
+  height:1px;
+  background-color: #c2c2c2;
+  margin:auto 10px;
+}
+.gf_time{
+  font-size:32px;
+  position:relative;
+}
+.good_flight_content{
+  padding:20px;
+  width:100%;
+  position: relative;
+}
+.flight_takeoff{
+  color:#b2b2b2;
+}
+.gf_time_location{
+  position: absolute;
+  font-size:16px;
+  bottom:-25px;
+  width:120px;
+}
+
+.gf_classflight{
+  font-weight: bold;
+  font-size:18px;
+  margin-bottom:5px;
+}
+.good_flight_price{
+  font-weight:bold;
+  font-size:20px;
+  color:#3F51B5;
+}
+.gf_price_button{
+  display:flex;
+  justify-content: space-between;
+  margin-top:50px;
+  align-items: flex-end;
+}
+.gf_button{
+  width:fit-content;
+}
+.button_txt{
+  font-family: 'Tenor Sans', sans-serif;
+  letter-spacing: normal;
+}
+.button_txt:hover{
+  transition: 0.3s ease;
+  background-color:#CB1C8D!important;
+}
+.first_cont{
+  display: flex;
+  justify-content: space-between;
+  margin-top:20px;
+}
+.gf_airline{
+  font-size:20px;
+  margin-left:10px;
+}
+.airline_logo{
+  width:40px;
+  height:40px;
+}
+.gf_airline_wrapper{
+  display:flex;
+  align-items: center;
+}
+.gf_clock{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top:30px;
+}
+.old_price{
+  color:red;
+  text-decoration: line-through;
+  font-weight: normal;
+}
+footer{
+  width:100%;
+  height:50px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+}
+.footer_content{
+  margin-left:20px;
+  color:white;
+}
+.logout{
+  color:red!important;
+}
+.main_wrapper{
+  margin:auto;
+  margin-top:180px;
+  width:90%;
+  max-width: 1200px;
+  padding-bottom:150px
+}
+.wrapp_main{
+  padding:130px 0px;
+  background-color: white;
+}
+.lg_but_wrapper{
+  margin:30px auto;
+  width: fit-content;
+}
+.haveAnAcc{
+  text-align: center;
+}
+.sign_link{
+  text-decoration: none;
+  font-weight: bold;
+  color:#3F51B5;
+}
+.sign_link:hover{
+  transition: 0.3s ease;
+  color:#CB1C8D;
+}
+.flight_date_start{
+  position:absolute;
+  top:15px;
+  font-weight: bold;
+  background-color: #e2e2e2;
+  border-radius: 20px;
+  padding:3px 10px;
+}
+.detail_main_content{
+  position: relative;
+}
+.detail_relative{
+  padding-top:45px;
+}
+.uf_wrapper{
+  max-width:1200px;
+  margin:auto;
+  margin-top:60px;
+  margin-bottom:60px;
+  min-height:100vh;
+}
+.small_wrap{
+  width:1200px;
+  margin:auto;
+  margin:60px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.s_flight{
+  width:350px;
+  height:auto;
+  min-height:450px;
+  background-color: white!important;
+  padding:0px 0px 20px;
+  border-radius: 8px;
+  box-shadow: 5px 0px 15px #c2c2c2;
+  margin-bottom:40px;
+}
+.small_flight{
+  width:350px;
+}
+.no_height{
+  height:0px;
+}
+.sw{
+  width:100%;
+  height:150px;
+  border-radius: 8px 8px 0px 0px;
+}
+.s_good_flight_time{
+  width:fit-content;
+  margin:auto;
+  margin:15px auto;
+  font-weight: bold;
+}
+.s_good_flight_time .gf_time{
+  font-size:16px;
+}
+
+.s_good_flight_time .flight_line{
+  width:40px;
+}
+.s_gf_airline_wrapper{
+  margin:15px auto 15px 10px;
+}
+.s_date{
+  margin:0px auto 15px 10px;
+  background-color: #e2e2e2;
+  width:fit-content;
+  font-weight: bold;
+  padding:5px 10px;
+  border-radius: 50px;
+}
+.review_hr{
+  height:1px;
+  width:90%;
+  margin:20px auto;
+  background-color: #c2c2c2;
+}
+
+

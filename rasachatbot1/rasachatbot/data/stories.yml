@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+
+- story: no help
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_goodbye
+
+- story: book flight
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_cities_question
+  - intent: cities
+    entities:
+    - city: "Belgrade"
+    - city: "New York"
+  - action: action_cities
+  - intent: departure
+    entities:
+    - date: "20/01/2023"
+  - action: action_date
+  - intent: airlines
+    entities:
+    - airline: "Air Serbia"
+  - action: action_airlines
+  - intent: seats
+    entities:
+    - seat: "1"
+  - action: action_seats
+  - intent: classflights
+    entities:
+    - classflight: "Economy"
+  - action: action_classflights
+  - intent: deny
+  - action: utter_goodbye
+

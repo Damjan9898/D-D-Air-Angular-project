@@ -1,0 +1,18 @@
+.hidden{
+    display:none;
+}
+.upcoming_flight{
+  height:240px;
+}
+
+.upcoming_flight .good_flight_img_wrapper{
+  height:240px;
+}
+.upcoming_flight .good_flight_img_wrapper img{
+  height:240px;
+}
+
+.uf_person{
+  position:relative;
+  top:5px;
+}

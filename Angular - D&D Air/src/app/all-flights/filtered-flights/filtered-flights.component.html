@@ -1,0 +1,99 @@
+<div class="main_wrapper fltr_main_wrapper">
+
+  <h2 class="filtered_title">Filltered Flights</h2>
+
+  <!-- Dropdown za i dugme koje poziva funkciju sabmitovanje  -->
+  <div class="sort">
+    <form #f="ngForm" class="form" (ngSubmit)="onSubmit(f)">
+      <div class="dropDown">
+        <mat-form-field appearance="fill">
+          <mat-label>Sort by</mat-label>
+          <mat-select ngModel name="sort">
+            <mat-option value="priceAsc">
+              Lowest Price
+            </mat-option>
+            <mat-option value="priceDesc">
+              Highest Price
+            </mat-option>
+            <mat-option value="seatsAsc">
+              Least seats left
+            </mat-option>
+            <mat-option value="seatsDesc">
+              Most seats left
+            </mat-option>
+            <mat-option value="distanceAsc">
+              Shortest distance
+            </mat-option>
+            <mat-option value="distanceDesc">
+              Longest distance
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="buttonSort">
+        <button class="matButton" type="submit" mat-raised-button color="primary" class="sort_button button_txt"> Sort </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="good_flights_wrapper scroll_flight">
+    <div *ngFor="let flight of flights | async" class="good_flight">
+      <div class="good_flight_img_wrapper">
+        <img src="{{flight.image}}">
+        <div class="city_block">{{ flight.locationend }}</div>
+      </div>
+      <div class="good_flight_content">
+        <div class="first_cont">
+          <div class="good_flight_time">
+            <div class="gf_time">
+              <div>{{flight.timestart}}</div>
+              <div class="gf_time_location">{{flight.locationstart}}</div>
+            </div>
+            <div class="flight_lines">
+              <div class="flight_line">
+
+              </div>
+              <mat-icon class="flight_takeoff">flight_takeoff</mat-icon>
+              <div class="flight_line">
+
+              </div>
+              <div class="gf_clock">
+                {{flight.time}}
+              </div>
+            </div>
+            <div class="gf_time">
+              <div>{{flight.timeend}}</div>
+              <div class="gf_time_location">{{flight.locationend}}</div>
+            </div>
+          </div>
+          <div class="gf_airline_wrapper">
+            <img class="airline_logo" src="{{flight.airlinelogo}}"><p class="gf_airline">{{flight.airline}}</p>
+          </div>
+        </div>
+
+        <div class="gf_price_button">
+          <div class="add_info_blk">
+            <div class="good_flight_price_wrapper">
+              <p class="gf_classflight">{{flight.classflight}}</p>
+
+              <p class="good_flight_price">{{flight.price}}.00 &euro;</p>
+            </div>
+            <div class="add_info">
+                <p class="gf_classflight add_inf"><mat-icon>airline_seat_recline_normal</mat-icon> <span class="seat_relative">{{flight.seats}}</span></p>
+                <p class="good_flight_price add_inf"><img src="../../assets/img/map.svg" alt="map" class="map"> <span class="distance_relative">{{flight.distance}}km</span></p>
+            </div>
+          </div>
+
+          <div class="gf_button">
+            <button mat-raised-button color="primary" class="button_txt" (click)="flightDetails(flight.id)">Flight Details</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

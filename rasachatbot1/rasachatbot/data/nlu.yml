@@ -1,0 +1,81 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: cities
+  examples: |
+    - I want to fly from [Belgrade]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}
+    - I want to fly from [Paris]{"entity": "city", "role": "from"} to [Moscow]{"entity": "city", "role": "to"}
+
+- intent: departure
+  examples: |
+    - On [20/01/2023](date)
+    - On [21/01/2023](date)
+    - On [22/01/2023](date)
+
+- intent: airlines
+  examples: |
+    - I would like [Air Serbia](airline)
+    - I would like [Fly Emirates](airline)
+    - I would like [Qatar Airways](airline)
+
+- intent: seats
+  examples: |
+    - [1](seat)
+    - [2](seat)
+    - [3](seat)
+    - [4](seat)
+    - [5](seat)
+
+- intent: classflights
+  examples: |
+    - [Economy](classflight)
+    - [Business](classflight)
+    - [First class](classflight)

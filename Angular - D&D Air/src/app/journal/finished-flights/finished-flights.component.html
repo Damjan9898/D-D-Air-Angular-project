@@ -1,0 +1,99 @@
+    <div class="small_wrap">
+      <div class="flight s_flight" *ngFor="let flight of flights | async;let i = index" [attr.data-index]="i">
+
+
+        <div class="small_flight">
+          <div class="good_flight_img_wrapper sw">
+            <img src="{{flight.image}}">
+            <div class="city_block">{{ flight.locationend }}</div>
+          </div>
+
+
+          <div class="gf_airline_wrapper s_gf_airline_wrapper">
+            <img class="airline_logo" src="{{flight.airlinelogo}}"><p class="gf_airline">{{flight.airline}}</p>
+          </div>
+
+          <div class="good_flight_time s_good_flight_time">
+            <div class="gf_time">
+              <div>{{flight.locationstart}}</div>
+            </div>
+            <div class="flight_lines">
+              <div class="flight_line">
+
+              </div>
+              <mat-icon class="flight_takeoff">flight_takeoff</mat-icon>
+              <div class="flight_line">
+
+              </div>
+            </div>
+            <div class="gf_time">
+              <div>{{flight.locationend}}</div>
+            </div>
+          </div>
+
+
+          <p class="s_date">
+            {{this.flightDate[i]}}
+          </p>
+        </div>
+
+        <hr class="review_hr">
+
+        <div class="rating_blk">
+        <div class="review" *ngIf="flight.given_review == 0">
+          <p class="r_title">Have you enjoyed the flight? Please, leave us a review!</p>
+            <mat-expansion-panel hideToggle class="width_drop">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="drop_tit">
+                  <span><b>Leave a review</b></span> <mat-icon class="expand">expand_more</mat-icon>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <form class="sf" #f="ngForm" (ngSubmit)="onSubmit(f, flight.name, flight.flight_id, flight.id)">
+                <div class="">
+                  <div id="rating_bar">
+                    <div  class="star" (click)="rate(1, i)"></div>
+                    <div  class="star" (click)="rate(2, i)"></div>
+                    <div class="star" (click)="rate(3, i)"></div>
+                    <div class="star" (click)="rate(4, i)"></div>
+                    <div  class="star" (click)="rate(5, i)"></div>
+                </div>
+                <mat-form-field class="matFormField" appearance="outline">
+                    <textarea matInput ngModel name="review" class="textarea"></textarea>
+                </mat-form-field>
+
+
+                  <!-- <mat-form-field class="rating" appearance="fill">
+                    <mat-label><mat-icon>star</mat-icon></mat-label>
+                    <mat-select ngModel name="rating">
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="5">5</mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+                <div class="commentButton">
+                    <button type="submit" color="primary" mat-raised-button>Submit</button>
+                </div>
+
+                </div>
+
+
+            </form>
+            </mat-expansion-panel>
+
+        </div>
+
+        <div class="thanks" *ngIf="flight.given_review == 1">
+          <p class="green_thanks">Thank you for leaving a review!</p>
+        </div>
+      </div>
+
+
+  </div>
+  <div class="small_flight no_height"></div>
+    <div class="small_flight no_height"></div>
+
+  </div>
+
+

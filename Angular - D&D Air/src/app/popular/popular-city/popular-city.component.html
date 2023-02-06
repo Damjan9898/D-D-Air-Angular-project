@@ -1,0 +1,42 @@
+
+  <div *ngFor="let popular_city of popular_cities | async">
+    <div class="main_block">
+      <img src="{{popular_city.mainimage}}" class="main_pipular)img">
+      <div class="black_popular">
+        <h1 class="popular_title">{{popular_city.city}}</h1>
+      </div>
+    </div>
+
+    <div class="main_content_pop">
+      <p>
+        {{popular_city.maintext}}
+      </p>
+    </div>
+
+
+    <div class="popularc_row">
+      <div class="popularc_column pop_img_c">
+        <img src="{{popular_city.secimage}}" class="main_pipular)img">
+      </div>
+      <div class="popularc_column pop_p_c">
+        <p> {{popular_city.sectext}}</p>
+      </div>
+    </div>
+
+    <div class="popularc_row pop_reverse">
+      <div class="popularc_column pop_img_c">
+        <img src="{{popular_city.thirdimage}}" class="main_pipular)img">
+      </div>
+      <div class="popularc_column pop_p_c">
+        <p> {{popular_city.thirdtext}}</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <p class="footer_content">
+      Copyright &#169; D&D Air
+    </p>
+  </footer>
