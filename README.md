@@ -29,15 +29,14 @@ Open [http://localhost:4200](http://localhost:4200) with your browser to see the
 ## Application Features
 
 
-<p>This travel application is designed to streamline the process of finding and booking vacation apartments:</p>
+<p>Experience the ease and convenience of managing your travel plans with our Flight Booking application. Here's what you can do:</p>
 <ul>
-    <li>A detailed catalog of vacation apartments available for booking.</li>
-    <li>Interactive display of apartments with location-specific details.</li>
-    <li>Customizable search filters to help users find their ideal apartment.</li>
-    <li>Options for users to save their favorite apartments for easy access.</li>
-    <li>Features allowing users to book an apartment, with a necessary login for security and personalization.</li>
-    <li>Facilities for users to cancel their reservations as needed.</li>
-  <br><br>
+    <li>Browse through a comprehensive list of active flights to find your perfect journey.</li>
+    <li>Utilize advanced filters to narrow down flight options based on your preferences.</li>
+    <li>Effortlessly book the desired number of seats for your travel.</li>
+    <li>Enjoy the flexibility to cancel your flights if plans change.</li>
+    <li>Review your travel history by checking all completed flights.</li>
+    <li>Engage with our innovative Rasa chatbot, which enables you to perform all these functions conveniently through simple chat interactions, enhancing your browsing experience.</li>
 </ul>
 
 
