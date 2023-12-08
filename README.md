@@ -42,26 +42,27 @@ Open [http://localhost:4200](http://localhost:4200) with your browser to see the
 
 ## Screenshots of main parts of the Web Application
 
-<h3>1) Home Page</h3>
+<h3>1) Home Page / Filter Flights</h3>
 
-  ![pt_1](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/b0e439ea-8993-4959-a088-0f51b0ee23a6)
-
-
-<h3>2) Browse and Filter Apartments</h3>
-
-  ![pt_2](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/48ed75c0-d72a-4888-b1af-1b1d04882ba0)
+  ![dd_1](https://github.com/Damjan9898/Flight-booking-Angular-project/assets/73915350/03e127ba-1ffb-41c4-a6ef-a779eafd8399)
 
 
-<h3>3) Apartment Info</h3>
+<h3>2) Browse Flights</h3>
 
-  ![pt_3](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/4c2e8879-d603-45bc-9fcf-0daf9e71e152)
-
-
-<h3>4) List of Reservations </h3>
-
-  ![pt_4](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/6d257a83-960e-4bc8-8591-cd399f5cc7c8)
+  ![dd_2](https://github.com/Damjan9898/Flight-booking-Angular-project/assets/73915350/e6224ab5-fdd5-41f5-9a42-cf7a0c01811a)
 
 
-<h3>5) Web application mobile view </h3>
+<h3>3) Flight Info</h3>
 
-  ![pt_5](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/3ff0e883-1ebf-4593-829c-184c10887d62)
+  ![dd_3](https://github.com/Damjan9898/Flight-booking-Angular-project/assets/73915350/2d8b1802-2659-47a6-9863-635254b4c758)
+
+
+<h3>4) List of booked flights</h3>
+
+  ![dd_4](https://github.com/Damjan9898/Flight-booking-Angular-project/assets/73915350/6bd6c657-4126-4aee-b58d-2d59e495ad27)
+
+
+<h3>5)Rasa chatbot preview</h3>
+
+  ![dd_5](https://github.com/Damjan9898/Flight-booking-Angular-project/assets/73915350/639deb85-3810-4146-9db8-62228b18757f)
+
