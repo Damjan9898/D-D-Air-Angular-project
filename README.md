@@ -16,6 +16,13 @@ Then you need to run the development server:
 ng serve
 ```
 
+Run Rasa chatbot servers separately:
+
+```bash
+//Rasa chatbot is a separate app which interacts with Flight Booking app through sockets. They need to be activated through separate terminal.
+```
+
+
 Open [http://localhost:4200](http://localhost:4200) with your browser to see the result.<span><br><br></span>
 
 
